@@ -37,9 +37,10 @@ li {
   list-style-type: none;
 }
 
+html,
 body {
-  overflow-x: hidden;
   background: var(--secondary);
+  overflow-x: hidden;
 }
 
 .button {
@@ -278,7 +279,6 @@ footer img {
 /* Small Tablet Styles */
 
 @media screen and (min-width: 620px) {
-
   /* Welcome Section */
 
   .welcome-text {
@@ -452,7 +452,7 @@ footer img {
   #contact {
     padding: 90px 0;
   }
-  
+
   /* Section */
 
   .arts a * {
