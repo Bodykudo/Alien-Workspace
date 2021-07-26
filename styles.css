@@ -1,0 +1,477 @@
+/* Variables */
+
+:root {
+  --primary: #ffc636;
+  --secondary: #0a0b5b;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  outline: 0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+  outline: none;
+}
+
+/* Global */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Rubik Regular";
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--secondary);
+}
+
+.button {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
+  display: inline-block;
+}
+
+.button:hover {
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+input,
+textarea {
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border: 2px solid #9893d8;
+  border-radius: 10px;
+  color: #f2f2f2;
+}
+
+@font-face {
+  font-family: "Rubik Regular";
+  src: url(fonts/Rubik-Regular.ttf);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #dddbff;
+  font-weight: normal;
+}
+
+p,
+a,
+li {
+  color: #9893d8;
+}
+
+h1,
+h3 {
+  font-size: 1.2em;
+}
+
+h1 {
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+.leading {
+  font-size: 1.1em;
+}
+
+/* Mobile Styles */
+
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+/* Navigation */
+
+.site-nav {
+  margin: 10px 20px;
+}
+
+.site-nav h1 {
+  grid-column: 1 / 5;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary);
+}
+
+.site-nav ul {
+  display: none;
+}
+
+/* Welcome Section */
+
+#welcome {
+  padding: 0 20px;
+}
+
+.welcome-text {
+  grid-column: 1 / 6;
+}
+
+.welcome-text h2 {
+  margin: 20px 0;
+}
+
+.welcome-text a {
+  margin: 20px 0;
+}
+
+.welcome-image {
+  grid-column: 6 / 9;
+}
+
+.welcome-image img {
+  width: 200%;
+}
+
+/* Section */
+
+#articles {
+  background: url(img/square_bg.png) no-repeat bottom;
+  background-size: cover;
+  padding: 30px 20px;
+}
+
+#articles h3 {
+  text-align: center;
+}
+
+.arts a {
+  grid-column: 1 / 9;
+  margin: 20px 0;
+  display: flex;
+}
+
+.arts a * {
+  margin: 0 20px;
+  max-width: 40%;
+  align-self: center;
+}
+
+.arts h4 {
+  color: #9994f7;
+}
+
+/* Section */
+
+#comets {
+  padding: 30px 20px;
+  background-color: #07083e;
+}
+
+#comets h3 {
+  text-align: center;
+}
+
+#comets ul {
+  margin: 40px 0;
+}
+
+#comets li {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  grid-column: span 4;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#comets img {
+  height: 100px;
+  margin: 10px auto;
+}
+
+/* Contact Section */
+
+#contact {
+  padding: 30px 20px;
+  background-color: #080936;
+}
+
+#contact h3,
+#contact p {
+  text-align: center;
+}
+
+#contact form {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin: 10px 0;
+  resize: none;
+}
+
+#contact .button {
+  margin-top: 10px;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px 20px;
+  background-color: #14153d;
+  background-image: url("img/footer_image.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: top center;
+}
+
+footer .copyright {
+  grid-column: 1/4;
+  font-size: 0.8em;
+}
+
+footer .social {
+  grid-column: 8 / 9;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .social li {
+  margin: 0 6px;
+}
+
+footer img {
+  width: 30px;
+  margin: 5px;
+}
+
+/* Small Tablet Styles */
+
+@media screen and (min-width: 620px) {
+
+  /* Welcome Section */
+
+  .welcome-text {
+    grid-column: 1 / 5;
+  }
+
+  .welcome-image {
+    grid-column: 5 / 9;
+  }
+
+  .welcome-image img {
+    width: 110%;
+  }
+
+  /* Section */
+
+  .arts {
+    margin-top: 40px;
+  }
+
+  .arts a {
+    grid-column: span 4;
+    display: block;
+    margin: 20px 0;
+  }
+
+  .arts a * {
+    max-width: 60%;
+    margin: 10px 20%;
+  }
+
+  .arts a:last-child {
+    grid-column: 3 / 7;
+  }
+
+  .arts h4 {
+    margin: 0 15%;
+    text-align: center;
+  }
+
+  /* Section */
+
+  #comets {
+    padding: 30px 100px;
+  }
+
+  /* Footer */
+
+  footer {
+    background-size: 20%;
+  }
+
+  footer .social {
+    flex-direction: row;
+  }
+}
+
+/* Large Tablets and Laptops Styles */
+
+@media screen and (min-width: 960px) {
+  * {
+    font-size: 18px;
+  }
+
+  .grid {
+    max-width: 1060px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .leading {
+    margin: 20px 0;
+  }
+
+  /* Navigation */
+
+  .site-nav {
+    padding: 10px 20px;
+  }
+
+  .site-nav h1 {
+    grid-column: 1 / 4;
+  }
+
+  .site-nav ul {
+    grid-column: 6 / 9;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  .site-nav li {
+    padding-right: 30px;
+    border-right: 1px solid var(--primary);
+  }
+
+  .site-nav li:last-child {
+    border-right: none;
+  }
+
+  /* Welcome Section */
+
+  #welcome {
+    padding: 40px;
+  }
+
+  .welcome-text {
+    align-self: center;
+  }
+
+  .welcome-image img {
+    width: 100%;
+  }
+
+  /* Section */
+
+  .arts a * {
+    max-width: 80%;
+    margin: 10px 10%;
+  }
+
+  .arts a:nth-child(1) {
+    grid-column: 2 / 4;
+  }
+
+  .arts a:nth-child(2) {
+    grid-column: 4 / 6;
+    padding-top: 140px;
+  }
+
+  .arts a:nth-child(3) {
+    grid-column: 6 / 8;
+  }
+
+  .arts h4 {
+    margin: 0 5%;
+  }
+
+  /* Section */
+
+  #comets {
+    padding: 30px 20px;
+  }
+
+  #comets ul {
+    margin: 40px auto;
+  }
+
+  #comets li {
+    grid-column: span 2;
+  }
+
+  /* Footer */
+
+  footer {
+    padding: 40px 20px;
+    background-size: 25%;
+  }
+}
+
+/* Desktop Styles */
+
+@media screen and (min-width: 1200px) {
+  * {
+    font-size: 20px;
+  }
+
+  #welcome,
+  #articles,
+  #comets,
+  #contact {
+    padding: 90px 0;
+  }
+  
+  /* Section */
+
+  .arts a * {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .arts a:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .arts a:nth-child(3) {
+    grid-column: 7 / 9;
+  }
+
+  /* Footer  */
+
+  footer {
+    padding: 80px 0;
+    background-size: 30%;
+  }
+}
