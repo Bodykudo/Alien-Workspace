@@ -165,12 +165,13 @@ h4 {
   width: 300%;
 }
 
-/* Section */
+/* Articles Section */
 
 #articles {
   background: url(img/square_bg.png) no-repeat bottom;
   background-size: cover;
   padding: 30px 20px;
+  position: relative;
 }
 
 #articles h3 {
@@ -194,7 +195,63 @@ h4 {
   color: #9994f7;
 }
 
-/* Section */
+/* Modals */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  background-color: #07083e;
+  overflow-y: scroll;
+  width: 90%;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.modal h1 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.modal img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal p {
+  font-size: 0.9em;
+}
+
+.close-modal {
+  align-self: flex-end;
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Comets Section */
 
 #comets {
   padding: 30px 20px;
@@ -283,59 +340,6 @@ footer img {
   margin: 5px;
 }
 
-/* Modals */
-
-.modal {
-  margin-top: 15px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  position: absolute;
-  background-color: #07083e;
-  overflow-y: scroll;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 90vh;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.modal h1 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-}
-
-.modal img {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.modal p {
-  font-size: 0.9em;
-}
-
-.hidden {
-  display: none;
-}
-
-.close-modal {
-  align-self: flex-end;
-  position: fixed;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 1;
-}
-
 /* Small Tablet Styles */
 
 @media screen and (min-width: 620px) {
@@ -353,7 +357,7 @@ footer img {
     width: 110%;
   }
 
-  /* Section */
+  /* Articles Section */
 
   .arts {
     margin-top: 40px;
@@ -379,22 +383,6 @@ footer img {
     text-align: center;
   }
 
-  /* Section */
-
-  #comets {
-    padding: 30px 100px;
-  }
-
-  /* Footer */
-
-  footer {
-    background-size: 20%;
-  }
-
-  footer .social {
-    flex-direction: row;
-  }
-
   /* Modals */
 
   .modal {
@@ -408,6 +396,22 @@ footer img {
 
   .modal img {
     width: 75%;
+  }
+
+  /* Comets Section */
+
+  #comets {
+    padding: 30px 100px;
+  }
+
+  /* Footer */
+
+  footer {
+    background-size: 20%;
+  }
+
+  footer .social {
+    flex-direction: row;
   }
 }
 
@@ -468,7 +472,7 @@ footer img {
     width: 100%;
   }
 
-  /* Section */
+  /* Articles Section */
 
   .arts a * {
     max-width: 80%;
@@ -492,7 +496,17 @@ footer img {
     margin: 0 5%;
   }
 
-  /* Section */
+  /* Modals */
+
+  .modal {
+    width: 75%;
+  }
+
+  .modal img {
+    width: 50%;
+  }
+
+  /* Comets Section */
 
   #comets {
     padding: 30px 20px;
@@ -512,16 +526,6 @@ footer img {
     padding: 40px 20px;
     background-size: 25%;
   }
-
-  /* Modals */
-
-  .modal {
-    width: 75%;
-  }
-
-  .modal img {
-    width: 50%;
-  }
 }
 
 /* Desktop Styles */
@@ -538,7 +542,7 @@ footer img {
     padding: 90px 0;
   }
 
-  /* Section */
+  /* Articles Section */
 
   .arts a * {
     max-width: 100%;
