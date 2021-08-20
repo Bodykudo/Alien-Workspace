@@ -286,6 +286,7 @@ footer img {
 /* Modals */
 
 .modal {
+  margin-top: 15px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
