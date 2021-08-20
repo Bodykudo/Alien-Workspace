@@ -30,9 +30,11 @@ for (let i = 0; i < closeModal.length; i++) {
   });
 }
 
-overlay.addEventListener("click", function () {
-  closeFunction();
-});
+document
+  .querySelector(".clickable-overlay")
+  .addEventListener("click", function () {
+    closeFunction();
+  });
 
 document.addEventListener("keydown", function (k) {
   if (currentModal != "" && k.key == "Escape") closeFunction();
