@@ -8,8 +8,8 @@ const overlay = document.querySelector(".overlay");
 function closeFunction() {
   document.querySelector(`.modal-${currentModal}`).classList.add("hidden");
   overlay.classList.add("hidden");
-  document.querySelector("body").style.overflowY = "inherit";
-  document.querySelector("html").style.overflowY = "inherit";
+  // document.querySelector("body").style.overflowY = "inherit";
+  // document.querySelector("html").style.overflowY = "inherit";
   currentModal = "";
 }
 
@@ -19,8 +19,8 @@ for (let i = 0; i < openModal.length; i++) {
     currentModal = classes[1];
     document.querySelector(`.modal-${currentModal}`).classList.remove("hidden");
     document.querySelector(".overlay").classList.remove("hidden");
-    document.querySelector("body").style.overflow = "hidden";
-    document.querySelector("html").style.overflow = "hidden";
+    // document.querySelector("body").style.overflow = "hidden";
+    // document.querySelector("html").style.overflow = "hidden";
   });
 }
 
