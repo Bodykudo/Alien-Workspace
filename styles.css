@@ -38,6 +38,11 @@
   font-family: "Rubik Regular";
 }
 
+::selection {
+  background-color: var(--primary);
+  color: #fff;
+}
+
 li {
   list-style-type: none;
 }
@@ -147,6 +152,7 @@ h4 {
 
 .welcome-text {
   grid-column: 1 / 6;
+  animation: lightSpeedInLeft 1s;
 }
 
 .welcome-text h2 {
@@ -159,6 +165,7 @@ h4 {
 
 .welcome-image {
   grid-column: 6 / 9;
+  animation: lightSpeedInRight 1s;
 }
 
 .welcome-image img {
@@ -183,6 +190,18 @@ h4 {
   margin: 20px 0;
   display: flex;
   cursor: pointer;
+}
+
+.rocket {
+  animation: fadeInRight 0.7s;
+}
+
+.nebula {
+  animation: fadeInRight 1.2s;
+}
+
+.astronaut {
+  animation: fadeInRight 1.7s;
 }
 
 .arts a * {
@@ -235,7 +254,7 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: zoom 0.5s ease-in-out;
+  animation: zoom 0.3s ease-in-out;
   z-index: 2;
 }
 
@@ -292,11 +311,13 @@ h4 {
   grid-column: span 4;
   text-align: center;
   border-radius: 20px;
+  animation: bounceInUp 1s ease-in-out;
 }
 
 #comets img {
   height: 100px;
   margin: 10px auto;
+  animation: fadeIn 2s;
 }
 
 /* Contact Section */
@@ -304,6 +325,10 @@ h4 {
 #contact {
   padding: 30px 20px;
   background-color: #080936;
+}
+
+#contact * {
+  animation: slideInDown 1s;
 }
 
 #contact h3,
@@ -338,6 +363,10 @@ footer {
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: top center;
+}
+
+footer * {
+  animation: zoomIn 1s ease-in-out;
 }
 
 footer .copyright {
